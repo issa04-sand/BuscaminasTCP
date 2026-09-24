@@ -15,4 +15,18 @@ Cada petición del cliente abre una conexión TCP nueva, envía un JSON con la a
 
 Se necesita JDK 17+ instalado.
 
+1. Levantar el servidor (elige el puerto que quieras):
 
+./gradlew :server:run --args="12345"
+
+
+2. En otra terminal, levantar el cliente apuntando a ese mismo puerto:
+
+./gradlew :client:run --args="localhost 12345"
+
+
+El cliente muestra un menú con las opciones para iniciar partida, destapar celdas, marcar banderas, consultar el tablero y rendirse.
+
+## Protocolo
+
+Las peticiones y respuestas usan Gson para serializar/deserializar objetos `Request` y `Response` a JSON, viajando por el socket con salto de línea como delimitador.
