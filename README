@@ -1,1 +1,18 @@
+# Buscaminas Distribuido TCP
+
+Proyecto de  Computación en Internet I (Universidad Icesi). 
+
+Implementacion del juego de Buscaminas con arquitectura cliente-servidor, usando sockets TCP y mensajes en formato JSON.
+
+## Estructura
+
+- `server/`: servidor que mantiene el estado del tablero y procesa las jugadas.
+- `client/`: cliente de consola que envía las peticiones y muestra el tablero.
+
+Cada petición del cliente abre una conexión TCP nueva, envía un JSON con la acción a realizar, y el servidor responde con el estado actualizado en una sola línea JSON.
+
+## Cómo correrlo
+
+Se necesita JDK 17+ instalado.
+
 
