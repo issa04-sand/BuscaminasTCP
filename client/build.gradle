@@ -1,0 +1,12 @@
+plugins {
+    id 'application'
+}
+
+application {
+    mainClass = 'co.icesi.buscaminas.client.MainClient'
+}
+
+
+run {
+    standardInput = System.in
+}
